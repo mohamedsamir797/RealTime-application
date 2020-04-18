@@ -1,5 +1,4 @@
 <template>
-    <v-card height="150">
         <v-footer
                 absolute
                 class="font-weight-medium"
@@ -11,7 +10,6 @@
                 {{ new Date().getFullYear() }} — <strong>MoSamir</strong>
             </v-col>
         </v-footer>
-    </v-card>
 </template>
 
 <script>

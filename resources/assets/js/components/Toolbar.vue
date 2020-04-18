@@ -5,7 +5,9 @@
             <v-tab>Forum</v-tab>
             <v-tab>Ask Question</v-tab>
             <v-tab>Category</v-tab>
-            <v-tab>Login</v-tab>
+            <router-link to="/login">
+                <v-tab>Login</v-tab>
+            </router-link>
         </v-toolbar>
 </template>
 
