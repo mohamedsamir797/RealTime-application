@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Http\Requests\SignupRequest;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -28,7 +30,7 @@ class AuthController extends Controller
         return $this->respondWithToken($token);
     }
 
-    public function signup(Request $request){
+    public function signup(SignupRequest $request){
         $request->password = bcrypt($request->password);
         User::create($request->all());
         return $this->login($request);

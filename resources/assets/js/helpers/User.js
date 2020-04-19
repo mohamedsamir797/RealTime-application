@@ -10,7 +10,9 @@ class User {
          const access_token = res.data.access_token;
         const username = res.data.user;
         if(Token.isValid(access_token)){
-            AppStorage.store(access_token,username)
+            AppStorage.store(access_token,username);
+            window.location = '/forum'
+
         }
     }
 
@@ -26,6 +28,7 @@ class User {
     }
     logout(){
         AppStorage.clear();
+        window.location = '/forum'
     }
     name(){
          if(this.loggedIn()){
